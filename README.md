@@ -1,35 +1,40 @@
+İşte içeriğinizi profesyonel bir şekilde biçimlendirilmiş bir **GitHub README.md** dosyasına dönüştürdüm:
+
+---
+
+```markdown
 # 🧩 Task Tracker - Frontend
 
-This is the **React-based frontend** for the Task Tracker application. It allows users to create, view, and delete tasks. It communicates with a backend API built using FastAPI.
+This is the **React-based frontend** for the Task Tracker application. It allows users to **create**, **view**, and **delete tasks**. It communicates with a **FastAPI** backend API.
 
 ---
 
 ## 📁 Project Structure
 
+```
+
 task-tracker-frontend/
 ├── public/
-│ └── index.html # HTML template for the frontend
+│   └── index.html               # HTML template for the frontend
 ├── src/
-│ ├── App.js # Main application logic
-│ ├── TaskList.js # (Optional) task list component
-│ ├── index.js # React app entry point
-│ └── index.css # Application styles
-├── Dockerfile # Docker configuration for containerizing the app
-├── package.json # Project dependencies
-├── package-lock.json # Dependency lock file
+│   ├── App.js                   # Main application logic
+│   ├── TaskList.js              # (Optional) Task list component
+│   ├── index.js                 # React app entry point
+│   └── index.css                # Application styles
+├── Dockerfile                   # Docker configuration
+├── package.json                 # Project dependencies
+├── package-lock.json            # Dependency lock file
 └── .github/
 └── workflows/
-└── deploy.yml # GitHub Actions CI/CD pipeline
+└── deploy.yml           # GitHub Actions CI/CD pipeline
 
-yaml
-Copy
-Edit
+````
 
 ---
 
 ## 🧪 Local Development
 
-To run the frontend locally using Node.js:
+To run the frontend locally using **Node.js**:
 
 ```bash
 # 1. Clone the repository
@@ -41,27 +46,33 @@ npm install
 
 # 3. Start the development server
 npm start
+````
+
 The application will be available at:
-👉 http://localhost:3000
+👉 [http://localhost:3000](http://localhost:3000)
 
-Make sure the backend (FastAPI) is running at:
-👉 http://localhost:8000/tasks/
+Ensure the backend (FastAPI) is running at:
+👉 [http://localhost:8000/tasks/](http://localhost:8000/tasks/)
 
-🐳 Docker Instructions
-🔧 1. Build Docker Image
-bash
-Copy
-Edit
+---
+
+## 🐳 Docker Instructions
+
+### 🔧 1. Build Docker Image
+
+```bash
 docker build -t yourdockerhubuser/task-tracker-frontend:2.0.0 .
-▶️ 2. Run Container
-bash
-Copy
-Edit
+```
+
+### ▶️ 2. Run Container
+
+```bash
 docker run -d -p 3000:3000 yourdockerhubuser/task-tracker-frontend:2.0.0
-☁️ 3. Push to Docker Hub
-bash
-Copy
-Edit
+```
+
+### ☁️ 3. Push to Docker Hub
+
+```bash
 # Login to Docker Hub
 docker login
 
@@ -71,21 +82,25 @@ docker push yourdockerhubuser/task-tracker-frontend:2.0.0
 # Optionally tag as latest
 docker tag yourdockerhubuser/task-tracker-frontend:2.0.0 yourdockerhubuser/task-tracker-frontend:latest
 docker push yourdockerhubuser/task-tracker-frontend:latest
-⚙️ GitHub Actions - CI/CD Pipeline
-This project includes a CI/CD workflow that automatically builds and pushes a Docker image to Docker Hub whenever changes are pushed to the main branch.
+```
 
-✅ What the workflow does:
-Checks out the latest code from the repo
+---
 
-Logs into Docker Hub using GitHub Secrets
+## ⚙️ GitHub Actions - CI/CD Pipeline
 
-Builds the Docker image
+This project includes a **CI/CD workflow** using GitHub Actions that automatically builds and pushes a Docker image to Docker Hub whenever changes are pushed to the `main` branch.
 
-Pushes the image to Docker Hub
+### ✅ Workflow Steps
 
-🔐 Required GitHub Secrets
-Go to your repo → Settings → Secrets → Actions, and add the following:
+* Check out the latest code from the repo
+* Log into Docker Hub using GitHub Secrets
+* Build the Docker image
+* Push the image to Docker Hub
 
-DOCKER_USERNAME
+### 🔐 Required GitHub Secrets
 
-DOCKER_PASSWORD
+Go to your repo → **Settings** → **Secrets** → **Actions**, and add the following:
+
+* `DOCKER_USERNAME`
+* `DOCKER_PASSWORD`
+
