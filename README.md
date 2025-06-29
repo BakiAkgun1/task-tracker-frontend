@@ -1,13 +1,9 @@
-İşte içeriğinizi profesyonel bir şekilde biçimlendirilmiş bir **GitHub README.md** dosyasına dönüştürdüm:
 
----
-
-```markdown
 # 🧩 Task Tracker - Frontend
 
 This is the **React-based frontend** for the Task Tracker application. It allows users to **create**, **view**, and **delete tasks**. It communicates with a **FastAPI** backend API.
 
----
+
 
 ## 📁 Project Structure
 
